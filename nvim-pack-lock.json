@@ -1,0 +1,37 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "327fff9",
+      "version": "'v1.7.0'"
+    },
+    "everforest": {
+      "rev": "46b297d"
+    },
+    "mason.nvim": {
+      "rev": "ad7146a"
+    },
+    "mini.ai": {
+      "rev": "0d3c9cf"
+    },
+    "mini.extra": {
+      "rev": "7a5231f"
+    },
+    "mini.pairs": {
+      "rev": "b316e68"
+    },
+    "mini.pick": {
+      "rev": "08a7220"
+    },
+    "nvim-lspconfig": {
+      "rev": "2010fc6"
+    },
+    "nvim-treesitter": [],
+    "oil.nvim": {
+      "rev": "7e1cd77"
+    },
+    "plenary.nvim": [],
+    "sidekick.nvim": {
+      "rev": "c2bdf8c"
+    }
+  }
+}
