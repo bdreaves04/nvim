@@ -10,7 +10,7 @@ vim.o.tabstop = 8
 vim.o.softtabstop = 0
 
 vim.o.wrap = false
-vim.g.clipboard = "pbcopy"
+vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 
 vim.api.nvim_create_autocmd('TextYankPost', {
