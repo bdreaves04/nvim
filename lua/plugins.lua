@@ -1,45 +1,15 @@
 vim.pack.add({
   { src = "https://github.com/nvim-lua/plenary.nvim" },
-  { src = "https://github.com/EdenEast/nightfox.nvim" },                                       -- colorscheme
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter",          branch = "main" },
-  { src = "https://github.com/stevearc/oil.nvim" },                                            -- file explorer
-  { src = "https://github.com/neovim/nvim-lspconfig" },                                        -- lsp defaults
-  { src = "https://github.com/echasnovski/mini.pick" },                                        -- file picker/input field
-  { src = "https://github.com/echasnovski/mini.ai" },                                          -- more text objects
-  { src = "https://github.com/echasnovski/mini.pairs" },                                       -- auto complete pairs i.e. '', ()
-  { src = "https://github.com/echasnovski/mini.extra" },                                       -- auto complete pairs i.e. '', ()
-  { src = "https://github.com/Saghen/blink.cmp",                         version = "v1.8.0" }, -- completions
-  { src = "https://github.com/mason-org/mason.nvim" },
-  { src = "https://github.com/folke/sidekick.nvim" },                                          -- AI Sidekick
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main" },
+  { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
-  { src = "https://github.com/nvimtools/none-ls.nvim" }
 })
 
-require('nightfox').setup({
-  options = {
-    transparent = true
-  }
-})
-vim.cmd("colorscheme nightfox")
+require('plugins.nightfox')
+require('plugins.oil')
+require('plugins.mini')
+require('plugins.blink')
+require('plugins.mason')
+require('plugins.null-ls')
 
-require("oil").setup({
-  view_options = { show_hidden = true }
-})
-local MiniPick = require('mini.pick')
-MiniPick.setup()
-vim.ui.select = MiniPick.ui_select
-require('mini.ai').setup()
-require('mini.pairs').setup()
-require('mini.extra').setup()
-require('blink.cmp').setup()
-require('mason').setup()
-require('sidekick').setup()
-
-
-vim.lsp.enable({ "lua_ls", "clangd", "pyright", "cssls", "gopls" })
-require("null-ls").setup({
-  sources = {
-    require("null-ls").builtins.formatting.stylua,
-    require("null-ls").builtins.formatting.prettier,
-  },
-})
+require('lsp')

@@ -1,0 +1,9 @@
+vim.pack.add({
+  { src = "https://github.com/nvimtools/none-ls.nvim" }
+})
+require("null-ls").setup({
+  sources = {
+    require("null-ls").builtins.formatting.stylua,
+    require("null-ls").builtins.formatting.prettier,
+  },
+})
