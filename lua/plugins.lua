@@ -2,7 +2,6 @@ vim.pack.add({
   { src = "https://github.com/nvim-lua/plenary.nvim" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
-  { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
 })
 
 require('plugins.nightfox')
@@ -11,5 +10,6 @@ require('plugins.mini')
 require('plugins.blink')
 require('plugins.mason')
 require('plugins.null-ls')
+require('plugins.markdown')
 
 require('lsp')
