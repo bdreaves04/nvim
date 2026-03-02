@@ -42,6 +42,3 @@ end
 vim.keymap.set('n', '<leader>fm', function()
   format_with_fallback()
 end, { desc = "Format with LSP or fallback to none-ls" }) -- format document
-
--- Sidekick
-vim.keymap.set('n', '<leader>sa', require("sidekick.nes").apply) -- accept nes suggestions
