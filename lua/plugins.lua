@@ -4,6 +4,12 @@ vim.pack.add({
   { src = "https://github.com/neovim/nvim-lspconfig" },
 })
 
+require("nvim-treesitter.configs").setup({})
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '<filetype>' },
+  callback = function() vim.treesitter.start() end,
+})
+
 require('plugins.nightfox')
 require('plugins.oil')
 require('plugins.mini')
