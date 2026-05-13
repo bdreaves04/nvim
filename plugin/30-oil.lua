@@ -4,3 +4,6 @@ vim.pack.add({
 require("oil").setup({
   view_options = { show_hidden = true }
 })
+
+-- Plugin Keymaps
+vim.keymap.set('n', '-', ':Oil<CR>', { silent = true })

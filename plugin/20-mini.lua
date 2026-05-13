@@ -42,3 +42,7 @@ MiniPick.setup({
   },
 })
 vim.ui.select = MiniPick.ui_select
+
+-- Plugin Keymaps
+vim.keymap.set('n', '<leader>ff', ':Pick files<CR>')
+vim.keymap.set('n', '<leader>fs', ':Pick grep_live<CR>')
