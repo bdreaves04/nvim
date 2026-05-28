@@ -2,6 +2,8 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = 'yes'
 vim.o.winborder = 'rounded'
+vim.o.scrolloff = 8
+vim.opt.smoothscroll = true
 
 vim.o.shiftwidth = 2
 vim.o.smarttab = true
@@ -21,4 +23,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+vim.o.foldmethod = 'expr'
+vim.o.foldlevel = 99
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.o.indentexpr = "v:lua.vim.treesitter.indentexpr()"
